@@ -9,14 +9,16 @@
 </head>
 <body>
     
+    
     <header>
-        <h1>Karamanın Burgercisi</h1>
+        <div id="anasayfa"></div>
+        <h1>FEL`S BURGER</h1>
         <nav>
             <ul>
-                <li> <a href="#">Ana Sayfa</a> </li>
-                <li> <a href="#">Menüler</a> </li>
-                <li> <a href="#">Hakkımızda</a> </li>
-                <li> <a href="#">İletişim</a> </li>
+                <li> <a href="#anasayfa">Ana Sayfa</a> </li>
+                <li> <a href="#menüler">Menüler</a> </li>
+                <li> <a href="#hakkimizda">Hakkımızda</a> </li>
+                <li> <a href="#iletisim">İletişim</a> </li>
             </ul>
         </nav>
     </header>
@@ -27,9 +29,7 @@
     </div>
 
     <div class="hero">
-        <h1>Lezzetli Yemeklerin Tek Adresi</h1>
-        <p>Karamanın Burgercisi</p>
-        <a href="#" class="button">Yemekleri Keşfet</a>
+        <a href="#menüler" class="button">Yemekleri Keşfet</a>
     </div>
 
     <section class="promotion">
@@ -78,7 +78,7 @@
                 <img src="img/devburgermenu.jpeg" alt="">
                 <h3>Dev Burger Menu</h3>
                 <p>2 Köfteli Burger. Baharatlı Patates. İçecek. Soslar</p>
-                <span><del>400 TL</del>275 TL</span>
+                <span><del>400 TL</del> &nbsp;275 TL</span>
                 <button class="order-button">Sipariş Ver</button>
                 <span class="tag">Popüler</span>
             </div>
@@ -92,14 +92,10 @@
             </div>
         </div>
 
-            
-        </div>
-
-          
-        </div>
     </section>
 
     <section class="menu">
+        <div id="menüler"></div>
         <h2>Tüm Menüler</h2>
         <div class="menu-items">
             <div class="menu-item">
@@ -130,6 +126,26 @@
 
     </section>
 
+    <section class="aboutus">
+        <div id="hakkimizda"></div>
+        <h1>HAKKIMIZDA</h1>
+        <p>
+            2020 yılında Falafel`s adı ile açtığımız işyerimiz şu anda Fel`s Burger
+            adıyla devam etmektedir. Çeşitli hamburgerler ve köfte tabağımız mevuttur.
+            Hamburger Menü alan müşterilerimize sınırsız patates kampanyamız vardır.
+            Mustafa Gür yanı , Henry Jones arkasında bulunan yerimize tüm burger severleri
+            bekliyoruz...
+        </p>
+    </section>
+
+    <section class="communication">
+        <div id="iletisim"></div>
+        <h1>İLETİŞİM</h1>
+        <p>
+
+        </p>
+    </section>
+
     <footer class="footer">
         <p>
             &copy;
@@ -138,5 +154,9 @@
         </p>
     </footer>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<a href="#anasayfa" class="float">
+<i class="fa fa-arrow-up"></i>
+</a>
 </body>
 </html>
