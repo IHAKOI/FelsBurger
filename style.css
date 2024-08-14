@@ -101,7 +101,7 @@ nav ul li a:hover{
 .button{
     display: inline-block;
     background-color: #a90432;
-    color: #ffffff;
+    color: #fdb912;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 4px;
@@ -138,6 +138,7 @@ nav ul li a:hover{
 .promotion h2, 
 .featured h2, 
 .menu h2{
+    text-align: center;
     margin-bottom: 20px;
     padding: 5px;
 }
@@ -235,7 +236,7 @@ del{
 	border-radius:50px;
 	text-align:center;
   font-size: 50px;
-	box-shadow: 2px 2px 3px #000000;
+	box-shadow: 2px 2px 3px #a90432;
   z-index: 100;
 }
 
