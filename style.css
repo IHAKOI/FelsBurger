@@ -227,7 +227,7 @@ del {
 
 .communication .social-icons {
     display: flex;
-    gap: 150px;
+    gap: 10vw;
     justify-content: center;
     margin-top: 10px;
 }
@@ -293,7 +293,7 @@ del {
     }
 
     .communication .social-icons {
-        gap: 100px;
+        gap: 10px;
     }
 }
 
@@ -317,6 +317,10 @@ del {
     .search-container input[type="text"] {
         width: 100%;
         margin-bottom: 10px;
+    }
+
+    .search-container button{
+        flex-wrap: nowrap;
     }
 
     .hero {
