@@ -20,13 +20,11 @@ header {
 header h1 {
     margin-bottom: 10px;
     text-align: center;
-
 }
 
 nav ul {
     list-style: none;
     text-align: center;
-
 }
 
 nav ul li {
@@ -77,6 +75,7 @@ nav ul li a:hover {
 
 .search-container button:hover {
     background-color: #a90432;
+    color: #fdb912;
 }
 
 .hero {
@@ -246,6 +245,7 @@ del {
 .social-icon:hover img {
     opacity: 0.2;
 }
+
 .float {
     position: fixed;
     width: 60px;
@@ -279,11 +279,53 @@ del {
     color: #a90432;
 }
 
+/* Media Queries */
 
+/* For tablets (width between 481px and 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .menu-items {
+        justify-content: space-around;
+    }
 
+    .menu-item {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    .communication .social-icons {
+        gap: 100px;
+    }
+}
+
+/* For mobile phones (width less than 480px) */
 @media only screen and (max-width: 480px) {
-    .menu {
-        text-align: center;
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .search-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .search-container input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        height: 30vh;
+    }
+
+    .menu-item {
+        width: 90%;
+        margin: 15px auto;
     }
 
     .promotion,
@@ -291,8 +333,13 @@ del {
         text-align: center;
     }
 
-    .menu-item {
-        width: 90%;
-        margin: 15px auto;
+    .communication .social-icons {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .communication .social-icons .social-icon i,
+    .social-icon img {
+        font-size: 3em;
     }
 }
