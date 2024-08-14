@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fel`s Burger</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/felsburgers.jpg" type="image/x-icon">
+    <div id="anasayfa"></div>
 </head>
+
 <body>
-    
-    
+
+
     <header>
-        <div id="anasayfa"></div>
         <h1>FEL`S BURGER</h1>
         <nav>
             <ul>
@@ -29,15 +31,62 @@
     </div>
 
     <div class="hero">
-        <a href="#menüler" class="button">Yemekleri Keşfet</a>
+        <div class="slides">
+            <div class="slide active">
+                <video autoplay muted loop class="video-slide">
+                    <source src="video/felsbeyazikihd.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video autoplay muted loop class="video-slide">
+                    <source src="video/felssiyahd.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide">
+                <video autoplay muted loop class="video-slide">
+                    <source src="video/felsbeyazhd.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
     </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                const video = slide.querySelector('video');
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                    if (video) {
+                        video.play();
+                    }
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 7000);
+
+    </script>
 
     <section class="promotion">
         <h2>İndirimli Yemekler</h2>
 
         <div class="menu-items">
             <div class="menu-item">
-                <img src="img/devburgermenu.jpeg" alt=""/>
+                <img src="img/devburgermenu.jpeg" alt="" />
                 <h3>Dev Burger Menü</h3>
                 <p>2 Köfteli Dev Burger. Baharatlı Patates. İçecek. Soslar.</p>
                 <span><del>400 TL</del> &nbsp; 275 TL</span>
@@ -99,7 +148,7 @@
         <h2>Tüm Menüler</h2>
         <div class="menu-items">
             <div class="menu-item">
-                <img src="img/devburgermenu.jpeg" alt=""/>
+                <img src="img/devburgermenu.jpeg" alt="" />
                 <h3>Dev Burger Menü</h3>
                 <p>2 Köfteli Dev Burger. Baharatlı Patates. İçecek. Soslar.</p>
                 <span><del>400 TL</del> &nbsp; 275 TL</span>
@@ -129,22 +178,40 @@
     <section class="aboutus">
         <div id="hakkimizda"></div>
         <h1>HAKKIMIZDA</h1>
-        <p>
-            2020 yılında Falafel`s adı ile açtığımız işyerimiz şu anda Fel`s Burger
-            adıyla devam etmektedir. Çeşitli hamburgerler ve köfte tabağımız mevuttur.
-            Hamburger Menü alan müşterilerimize sınırsız patates kampanyamız vardır.
-            Mustafa Gür yanı , Henry Jones arkasında bulunan yerimize tüm burger severleri
-            bekliyoruz...
-        </p>
+        <h4>
+            2020 YILINDA FALAFEL'S ADIYLA AÇILAN YERİMİZ,
+            ŞU AN FEL'S BURGER OLARAK HİZMETİNİZE DEVAM EDİYOR!
+            ÇEŞİTLİ HAMBURGERLERİMİZ VE 
+            KÖFTE TABAKLARIMIZLA ZENGİN MENÜMÜZÜ KEŞFETMEK İÇİN BEKLERİZ.
+            HAMBURGER MENÜ ALAN MÜŞTERİLERİMİZE SINIRSIZ PATATES KAMPANYAMIZ VAR!
+            MUSTAFA GÜR YANI VE HENRY JONES ARKASINDAKİ YERİMİZE, 
+            TÜM BURGER SEVERLERİ BEKLİYORUZ...
+        </h4>
     </section>
 
     <section class="communication">
         <div id="iletisim"></div>
         <h1>İLETİŞİM</h1>
-        <p>
-
-        </p>
+        <div class="social-icons">
+            <a href="https://wa.me/5452576560" target="_blank" class="social-icon">
+                <i class="fa fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/fels_burger/" target="_blank" class="social-icon">
+                <i class="fa fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/ramazan.can.50309?mibextid=ZbWKwL" target="_blank" class="social-icon">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://getir.com/yemek/restoran/fel-s-burger-merkez-kulhan-mah-merkez-karaman/" target="_blank"
+                class="social-icon">
+                <img src="img/getirlogo.png" alt="Getir" />
+            </a>
+            <a href="https://www.yemeksepeti.com/restaurant/lv9t/falafels-burger" target="_blank" class="social-icon">
+                <img src="img/yemeksepeti.png" alt="Yemeksepeti" />
+            </a>
+        </div>
     </section>
+
 
     <footer class="footer">
         <p>
@@ -154,9 +221,23 @@
         </p>
     </footer>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<a href="#anasayfa" class="float">
-<i class="fa fa-arrow-up"></i>
-</a>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="#anasayfa" class="float" id="backToTop">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+
+    <script>
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+    </script>
+    
+    
 </body>
+
 </html>
